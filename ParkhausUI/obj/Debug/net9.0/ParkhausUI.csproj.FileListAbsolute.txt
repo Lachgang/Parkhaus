@@ -134,3 +134,4 @@ C:\Users\Anwender\source\repos\Parkhaus\ParkhausUI\bin\Debug\net9.0\zh-Hans\Micr
 C:\Users\Anwender\source\repos\Parkhaus\ParkhausUI\bin\Debug\net9.0\zh-Hant\Microsoft.Spatial.resources.dll
 C:\Users\Anwender\source\repos\Parkhaus\ParkhausUI\obj\Debug\net9.0\ParkhausUI.csproj.AssemblyReference.cache
 C:\Users\Anwender\source\repos\Parkhaus\ParkhausUI\obj\Debug\net9.0\ParkhausUI.csproj.Up2Date
+C:\Users\Anwender\source\repos\Parkhaus\ParkhausUI\obj\Debug\net9.0\ParkhausUI.sourcelink.json

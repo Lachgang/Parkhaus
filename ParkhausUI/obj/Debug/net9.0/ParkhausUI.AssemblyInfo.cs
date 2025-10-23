@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ParkhausUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dda8193d848e2763436644cf4d8acdb3c25d118e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ParkhausUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ParkhausUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

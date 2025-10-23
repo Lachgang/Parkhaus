@@ -1,7 +1,6 @@
 using System.Diagnostics;
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.ResponseCompression;
 using ParkhausUI.Models;
 
 namespace ParkhausUI.Controllers
@@ -13,6 +12,9 @@ namespace ParkhausUI.Controllers
         private readonly string apiBaseUrl = "http://ParkhausAPI/Tickets";
         private static readonly HttpClient httpClient = new HttpClient();
 
+        
+        private static Dictionary<string, int> ticketParkplatzMap = new Dictionary<string, int>();
+
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -20,7 +22,7 @@ namespace ParkhausUI.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(parkhaus);
         }
 
         public IActionResult Privacy()
@@ -33,16 +35,18 @@ namespace ParkhausUI.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
         [HttpPost]
         public async Task<IActionResult> ParkhausEinfahrt(int parkplatz)
         {
             if (parkhaus.VerfügbareParkplätze() < 1)
             {
-                ViewBag.Message = "keine Plätze frei! scusi";
+                ViewBag.Message = "Keine Plätze frei! Scusi";
                 return View("Index", parkhaus);
             }
 
-            if (parkhaus.Parkplaetze[parkplatz - 1].Belegt) {
+            if (parkhaus.Parkplaetze[parkplatz - 1].Belegt)
+            {
                 ViewBag.Message = "Platz bereits belegt!";
                 return View("Index", parkhaus);
             }
@@ -50,6 +54,10 @@ namespace ParkhausUI.Controllers
             parkhaus.Parkplaetze[parkplatz - 1].Belegt = true;
 
             var ticket = parkhaus.TicketAutomat.ErstelleTicket();
+
+            
+            ticketParkplatzMap[ticket.TicketID] = parkplatz;
+
             try
             {
                 await speichern(ticket);
@@ -59,10 +67,12 @@ namespace ParkhausUI.Controllers
             {
                 ViewBag.Message = $"Fehler beim Speichern des Tickets: {ex.Message}";
                 parkhaus.TicketAutomat.LöscheTicket(ticket);
+                parkhaus.Parkplaetze[parkplatz - 1].Belegt = false;
+                ticketParkplatzMap.Remove(ticket.TicketID);
             }
             return View("Index", parkhaus);
-
         }
+
         [HttpPost]
         public async Task<IActionResult> ParkhausAusfahrt(string ticketId)
         {
@@ -72,12 +82,27 @@ namespace ParkhausUI.Controllers
                 ViewBag.Message = "Ungültige Ticket ID!";
                 return View("Index", parkhaus);
             }
+
+            
+            if (!ticketParkplatzMap.TryGetValue(ticketId, out int parkplatzNummer))
+            {
+                ViewBag.Message = "Parkplatz-Zuordnung nicht gefunden!";
+                return View("Index", parkhaus);
+            }
+
             ticket.Ausfahrtszeit = DateTime.Now;
             ticket.Bezahlt = true;
+
             try
             {
                 await Aktualisieren(ticket);
+
+                
+                parkhaus.Parkplaetze[parkplatzNummer - 1].Belegt = false;
+
                 parkhaus.TicketAutomat.LöscheTicket(ticket);
+                ticketParkplatzMap.Remove(ticketId);
+
                 ViewBag.Message = "Danke fürs Besuchen! Auf Wiedersehen!";
             }
             catch (Exception ex)
@@ -100,23 +125,21 @@ namespace ParkhausUI.Controllers
                 var response = await httpClient.PostAsync(apiBaseUrl, content);
                 response.EnsureSuccessStatusCode();
             }
-
             catch (Exception ex)
             {
                 throw new Exception("Fehler beim Speichern des Tickets: " + ex.Message);
             }
         }
+
         private async Task Aktualisieren(Tickets ticket)
         {
-           
             try
             {
                 var json = JsonSerializer.Serialize(ticket);
                 var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
-                var response = await httpClient.PatchAsync(apiBaseUrl, content);
+                var response = await httpClient.PatchAsync($"{apiBaseUrl}('{ticket.TicketID}')", content);
                 response.EnsureSuccessStatusCode();
             }
-
             catch (Exception ex)
             {
                 throw new Exception("Fehler beim Aktualisieren des Tickets: " + ex.Message);
@@ -124,4 +147,3 @@ namespace ParkhausUI.Controllers
         }
     }
 }
-//Kontroll über website->logik

@@ -1,9 +1,291 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model ParkhausUI.Models.Parkhaus
+
+@{
+    ViewData["Title"] = "Parkhaus Verwaltung";
+    var parkhaus = Model ?? new ParkhausUI.Models.Parkhaus(50, 0.25f);
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    body {
+        background-color: #000000;
+        color: #e0e0e0;
+    }
+
+    .main-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .page-title {
+        color: #ffffff;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+
+    .status-card {
+        background-color: #1a1a1a;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .status-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .status-item {
+        text-align: center;
+    }
+
+    .status-label {
+        color: #888;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .status-value {
+        color: #ffffff;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .action-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .action-card {
+        background-color: #1a1a1a;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 1.5rem;
+    }
+
+    .action-title {
+        color: #ffffff;
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+    }
+
+    .form-label {
+        color: #b0b0b0;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    .form-input {
+        width: 100%;
+        padding: 0.75rem;
+        background-color: #0a0a0a;
+        border: 1px solid #444;
+        border-radius: 4px;
+        color: #ffffff;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #666;
+        }
+
+    .form-hint {
+        color: #666;
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn-enter {
+        width: 100%;
+        padding: 0.75rem;
+        background-color: #2a2a2a;
+        color: #ffffff;
+        border: 1px solid #444;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+        .btn-enter:hover {
+            background-color: #333;
+            border-color: #555;
+        }
+
+    .btn-exit {
+        width: 100%;
+        padding: 0.75rem;
+        background-color: #2a2a2a;
+        color: #ffffff;
+        border: 1px solid #444;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+        .btn-exit:hover {
+            background-color: #333;
+            border-color: #555;
+        }
+
+    .spots-card {
+        background-color: #1a1a1a;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 1.5rem;
+    }
+
+    .spots-title {
+        color: #ffffff;
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+    }
+
+    .spots-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 0.75rem;
+    }
+
+    .spot {
+        aspect-ratio: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        font-weight: 500;
+        cursor: default;
+    }
+
+    .spot-free {
+        background-color: #1a1a1a;
+        border: 1px solid #444;
+        color: #888;
+    }
+
+    .spot-occupied {
+        background-color: #2a2a2a;
+        border: 1px solid #555;
+        color: #aaa;
+    }
+
+    .spot-number {
+        font-size: 1.1rem;
+    }
+
+    .message-box {
+        background-color: #1a1a1a;
+        border: 1px solid #444;
+        border-radius: 4px;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        color: #ffffff;
+    }
+
+    .message-close {
+        background: none;
+        border: none;
+        color: #888;
+        float: right;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+        .message-close:hover {
+            color: #fff;
+        }
+
+    @@media (max-width: 768px) {
+        .status-grid {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .action-section {
+            grid-template-columns: 1fr;
+        }
+
+        .spots-grid {
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+        }
+    }
+</style>
+
+<div class="main-container">
+    <h1 class="page-title">Parkhaus Verwaltung</h1>
+
+    @if (ViewBag.Message != null)
+    {
+        <div class="message-box" id="messageBox">
+            <button class="message-close" onclick="document.getElementById('messageBox').style.display='none'">&times;</button>
+            @ViewBag.Message
+        </div>
+    }
+
+    <div class="status-card">
+        <div class="status-grid">
+            <div class="status-item">
+                <div class="status-label">Gesamte Parkplätze</div>
+                <div class="status-value">@parkhaus.Parkplaetze.Length</div>
+            </div>
+            <div class="status-item">
+                <div class="status-label">Verfügbare Plätze</div>
+                <div class="status-value">@parkhaus.VerfügbareParkplätze()</div>
+            </div>
+            <div class="status-item">
+                <div class="status-label">Belegte Plätze</div>
+                <div class="status-value">@(parkhaus.Parkplaetze.Length - parkhaus.VerfügbareParkplätze())</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="action-section">
+        <div class="action-card">
+            <h2 class="action-title">Einfahrt</h2>
+            <form asp-action="ParkhausEinfahrt" method="post">
+                <label for="parkplatz" class="form-label">Parkplatz Nummer</label>
+                <input type="number" class="form-input" id="parkplatz" name="parkplatz"
+                       min="1" max="@parkhaus.Parkplaetze.Length" required>
+                <div class="form-hint">Wählen Sie einen Parkplatz zwischen 1 und @parkhaus.Parkplaetze.Length</div>
+                <button type="submit" class="btn-enter">Einfahren</button>
+            </form>
+        </div>
+
+        <div class="action-card">
+            <h2 class="action-title">Ausfahrt</h2>
+            <form asp-action="ParkhausAusfahrt" method="post">
+                <label for="ticketId" class="form-label">Ticket ID</label>
+                <input type="text" class="form-input" id="ticketId" name="ticketId"
+                       placeholder="Ticket ID eingeben" required>
+                <div class="form-hint">Die Ticket ID haben Sie bei der Einfahrt erhalten</div>
+                <button type="submit" class="btn-exit">Ausfahren</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="spots-card">
+        <h2 class="spots-title">Parkplatz Übersicht</h2>
+        <div class="spots-grid">
+            @for (int i = 0; i < parkhaus.Parkplaetze.Length; i++)
+            {
+                var parkplatz = parkhaus.Parkplaetze[i];
+                var statusClass = parkplatz.Belegt ? "spot-occupied" : "spot-free";
+
+                <div class="spot @statusClass">
+                    <div class="spot-number">@(i + 1)</div>
+                </div>
+            }
+        </div>
+    </div>
 </div>
-<!--Aussehen von der website-->

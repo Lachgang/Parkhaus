@@ -6,9 +6,12 @@
         public float PreisproMinute;
         public TicketAutomat TicketAutomat;
 
+       
         public Parkhaus(int parkplatzAnzahl, float preisproMinute)
         {
-            Parkplaetze = new Parkplatz[parkplatzAnzahl];
+            Parkplaetze = Enumerable.Range(0, parkplatzAnzahl)
+                                   .Select(_ => new Parkplatz())
+                                   .ToArray();
             PreisproMinute = preisproMinute;
             TicketAutomat = new TicketAutomat(this);
         }

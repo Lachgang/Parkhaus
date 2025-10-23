@@ -1,0 +1,16 @@
+services:
+  ParkhausUI:
+    image: ${DOCKER_REGISTRY-}parkhausui
+    build:
+      context: .
+      dockerfile: ./ParkhausUI/Dockerfile
+  ParkhausAPI:
+    image: ${DOCKER_REGISTRY-}parkhausapi
+    build:
+      context: .
+      dockerfile: ./ParkhausAPI/Dockerfile
+  mssql:
+    image: ${DOCKER_REGISTRY-}parkhaussql
+    build:
+      context: .
+      dockerfile: ./Dockerfile

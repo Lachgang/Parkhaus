@@ -1,0 +1,207 @@
+{
+  "version": 2,
+  "dgSpecHash": "7PXUwpzwHg8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.aspnet.odata\\6.0.0\\microsoft.aspnet.odata.6.0.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.aspnet.webapi.client\\4.0.20505\\microsoft.aspnet.webapi.client.4.0.20505.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.aspnet.webapi.core\\4.0.20505\\microsoft.aspnet.webapi.core.4.0.20505.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.3.0\\microsoft.aspnetcore.cors.2.3.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.3.0\\microsoft.aspnetcore.http.abstractions.2.3.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.3.0\\microsoft.aspnetcore.http.extensions.2.3.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.3.0\\microsoft.aspnetcore.http.features.2.3.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\1.0.0\\microsoft.extensions.dependencyinjection.1.0.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\8.0.0\\microsoft.extensions.fileproviders.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.net.http\\2.0.20505\\microsoft.net.http.2.0.20505.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.net.http.headers\\2.3.0\\microsoft.net.http.headers.2.3.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.odata.core\\7.0.0\\microsoft.odata.core.7.0.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.odata.edm\\7.0.0\\microsoft.odata.edm.7.0.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.spatial\\7.0.0\\microsoft.spatial.7.0.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.22.1\\microsoft.visualstudio.azure.containers.tools.targets.1.22.1.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\newtonsoft.json\\6.0.4\\newtonsoft.json.6.0.4.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\swashbuckle.core\\5.5.2\\swashbuckle.core.5.5.2.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\swashbuckle.odata\\3.5.0\\swashbuckle.odata.3.5.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\system.buffers\\4.6.0\\system.buffers.4.6.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\system.collections\\4.0.11\\system.collections.4.0.11.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\system.collections.concurrent\\4.0.12\\system.collections.concurrent.4.0.12.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\system.diagnostics.debug\\4.0.11\\system.diagnostics.debug.4.0.11.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\system.diagnostics.tracing\\4.1.0\\system.diagnostics.tracing.4.1.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\system.globalization\\4.0.11\\system.globalization.4.0.11.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\system.io\\4.1.0\\system.io.4.1.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\system.reflection\\4.1.0\\system.reflection.4.1.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\system.reflection.primitives\\4.0.1\\system.reflection.primitives.4.0.1.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\system.resources.resourcemanager\\4.0.1\\system.resources.resourcemanager.4.0.1.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\system.runtime\\4.1.0\\system.runtime.4.1.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\system.runtime.extensions\\4.1.0\\system.runtime.extensions.4.1.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\system.text.encoding\\4.0.11\\system.text.encoding.4.0.11.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\system.threading\\4.0.11\\system.threading.4.0.11.nupkg.sha512",
+    "C:\\Users\\Anwender\\.nuget\\packages\\system.threading.tasks\\4.0.11\\system.threading.tasks.4.0.11.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "message": "Swashbuckle.OData 3.5.0 stellt keine inklusive untere Grenze für Abhängigkeiten Microsoft.AspNet.WebApi.Client (< 6.0.0) bereit. Microsoft.AspNet.WebApi.Client 4.0.20505 wurde stattdessen aufgelöst.",
+      "projectPath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "libraryId": "Microsoft.AspNet.WebApi.Client",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "message": "Swashbuckle.OData 3.5.0 stellt keine inklusive untere Grenze für Abhängigkeiten Microsoft.AspNet.WebApi.Core (< 6.0.0) bereit. Microsoft.AspNet.WebApi.Core 4.0.20505 wurde stattdessen aufgelöst.",
+      "projectPath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "libraryId": "Microsoft.AspNet.WebApi.Core",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "message": "Erkannte Paketversion außerhalb der Abhängigkeitseinschränkung: \"Microsoft.AspNet.OData 6.0.0\" erfordert Microsoft.Extensions.DependencyInjection.Abstractions (>= 1.0.0 && < 2.0.0), aber es wurde Version Microsoft.Extensions.DependencyInjection.Abstractions 8.0.2 aufgelöst.",
+      "projectPath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "libraryId": "Microsoft.Extensions.DependencyInjection.Abstractions",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Das Paket \"Microsoft.AspNet.OData 6.0.0\" wurde nicht mit dem Projektzielframework \"net9.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "projectPath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "libraryId": "Microsoft.AspNet.OData",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Das Paket \"Microsoft.AspNet.WebApi.Client 4.0.20505\" wurde nicht mit dem Projektzielframework \"net9.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "projectPath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "libraryId": "Microsoft.AspNet.WebApi.Client",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Das Paket \"Microsoft.AspNet.WebApi.Core 4.0.20505\" wurde nicht mit dem Projektzielframework \"net9.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "projectPath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "libraryId": "Microsoft.AspNet.WebApi.Core",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Das Paket \"Microsoft.Net.Http 2.0.20505\" wurde nicht mit dem Projektzielframework \"net9.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "projectPath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "libraryId": "Microsoft.Net.Http",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Das Paket \"Microsoft.OData.Core 7.0.0\" wurde nicht mit dem Projektzielframework \"net9.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "projectPath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "libraryId": "Microsoft.OData.Core",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Das Paket \"Microsoft.OData.Edm 7.0.0\" wurde nicht mit dem Projektzielframework \"net9.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "projectPath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "libraryId": "Microsoft.OData.Edm",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Das Paket \"Microsoft.Spatial 7.0.0\" wurde nicht mit dem Projektzielframework \"net9.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "projectPath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "libraryId": "Microsoft.Spatial",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Das Paket \"Newtonsoft.Json 6.0.4\" wurde nicht mit dem Projektzielframework \"net9.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "projectPath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Das Paket \"Swashbuckle.Core 5.5.2\" wurde nicht mit dem Projektzielframework \"net9.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "projectPath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "libraryId": "Swashbuckle.Core",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Das Paket \"Swashbuckle.OData 3.5.0\" wurde nicht mit dem Projektzielframework \"net9.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "projectPath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Anwender\\source\\repos\\Parkhaus\\ParkhausUI\\ParkhausUI.csproj",
+      "libraryId": "Swashbuckle.OData",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+name: parkhauscontainer7568335322217626543
+services:
+  ParkhausAPI:
+    build:
+      context: C:\Users\Anwender\source\repos\Parkhaus
+      dockerfile: ./ParkhausAPI/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:80
+    image: parkhausapi
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "60002"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\Anwender\AppData\Roaming/Microsoft/UserSecrets
+        target: /root/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\Anwender\AppData\Roaming/ASP.NET/https
+        target: /root/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+  ParkhausUI:
+    build:
+      context: C:\Users\Anwender\source\repos\Parkhaus
+      dockerfile: ./ParkhausUI/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:80
+    image: parkhausui
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "60000"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\Anwender\AppData\Roaming/Microsoft/UserSecrets
+        target: /root/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\Anwender\AppData\Roaming/ASP.NET/https
+        target: /root/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+  mssql:
+    build:
+      context: C:\Users\Anwender\source\repos\Parkhaus
+      dockerfile: ./Dockerfile
+    image: parkhaussql
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 1433
+        published: "1433"
+        protocol: tcp
+networks:
+  default:
+    name: parkhauscontainer7568335322217626543_default
